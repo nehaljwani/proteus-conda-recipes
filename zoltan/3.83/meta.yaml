@@ -1,0 +1,21 @@
+package:
+  name: zoltan
+  version: 3.83
+
+source:
+  fn: zoltan_distrib_v3.83.tar.gz
+  url: http://www.cs.sandia.gov/~kddevin/Zoltan_Distributions/zoltan_distrib_v3.83.tar.gz
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - mpich 3.2*
+  run:
+    - mpich 3.2*
+
+about:
+  home: http://www.cs.sandia.gov/Zoltan/
+  license: BSD
+  summary: The Zoltan Library provides critical data-management services to a wide range of parallel applications.
