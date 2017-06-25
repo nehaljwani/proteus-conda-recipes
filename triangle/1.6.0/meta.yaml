@@ -1,0 +1,27 @@
+package:
+    name: triangle
+    version: 1.6
+
+source:
+    fn: triangle.zip
+    url: https://github.com/erdc-cm/triangle/archive/7ecebd8389cf6bab52c0855a68efab98d5cf2383.zip
+    sha256: 7432c0beca45db7d9242d64c334750f9b13fefa4cdb00f137f31f429757701ba
+
+build:
+  number: 0
+  skip: True  # [win]
+
+requirements:
+  build:
+    - mpich 3.2*
+  run:
+    - mpich 3.2*
+
+test:
+  commands:
+    - test -f ${PREFIX}/bin/triangle
+
+about:
+    home: http://www.cs.cmu.edu/~quake/triangle.html
+    license: MIT-like
+    summary: A Two-Dimensional Quality Mesh Generator and Delaunay Triangulator.
