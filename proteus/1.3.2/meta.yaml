@@ -10,6 +10,7 @@ source:
   sha256: 7592b5175773a723d1c547b3dd1dc2be5f16a0b84c44a3cf3699271b4ba8dc06
   patches:
     - use-member-initializer-list.patch
+    - Fix-comparision-with-None.patch
 
 build:
   number: 0
