@@ -36,6 +36,7 @@ requirements:
   run:
     - cython >=0.24
     - daetk
+    - gmsh
     - hdf5 1.8.*
     - matplotlib
     - metis 5.*
