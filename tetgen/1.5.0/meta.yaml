@@ -21,7 +21,6 @@ build:
 requirements:
   build:
     - python  # [win]
-    - toolchain
     - cmake >2.8  # [win]
 
   run:
