@@ -1,0 +1,43 @@
+{% set name = "gmsh" %}
+{% set version = "3.0.3" %}
+{% set md5 = "6534f19d8075b5cb98bf539d3b90abe6" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}-source.tgz
+  url: http://gmsh.info/src/{{ name }}-{{ version }}-source.tgz
+  md5: {{ md5 }}
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - cmake
+    - gmp # [not win]
+    - openblas # [linux]
+  run:
+    - gmp # [not win]
+    - openblas # [linux]
+
+test:
+  commands:
+    - gmsh -help
+
+about:
+  home: http://geuz.org/gmsh/
+  license: GPL
+  license_file: LICENSE.txt
+  summary: A three-dimensional finite element mesh generator with built-in pre- and post-processing facilities
+  description: |
+    Gmsh is a free 3D finite element grid generator with a build-in CAD
+    engine and post-processor. Its design goal is to provide a fast, light
+    and user-friendly meshing tool with parametric input and advanced
+    visualization capabilities. Gmsh is built around four modules:
+    geometry, mesh, solver and post-processing. The specification of any
+    input to these modules is done either interactively using the graphical
+    user interface or in ASCII text files using Gmsh's own scripting
+    language.
