@@ -18,10 +18,18 @@ requirements:
   build:
     - cmake
     - gmp # [not win]
+    - mpich 3.*
     - openblas # [linux]
+    - petsc 3.7.*
+    - petsc4py 3.7.*
+    - swig
+    - tetgen
   run:
     - gmp # [not win]
+    - mpich 3.*
     - openblas # [linux]
+    - petsc 3.7.*
+    - petsc4py 3.7.*
 
 test:
   commands:
