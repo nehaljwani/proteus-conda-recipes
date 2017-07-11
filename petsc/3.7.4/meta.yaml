@@ -29,15 +29,19 @@ requirements:
     - openblas {{openblas_version}}
     {% endif %}
     - {{mpi}} {{req[mpi]}}
-    - ptscotch
+    - metis 5.*
+    - parmetis 4.0.*
     - suitesparse 4.5.4
+    - superlu_dist 5.*
   run:
     {% if blas == 'openblas' %}
     - openblas {{openblas_version}}
     {% endif %}
     - {{mpi}} {{req[mpi]}}
-    - ptscotch
+    - metis 5.*
+    - parmetis 4.0.*
     - suitesparse 4.5.4
+    - superlu_dist 5.*
 
 test:
   source_files:
