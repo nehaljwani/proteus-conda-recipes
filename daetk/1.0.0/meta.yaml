@@ -22,6 +22,10 @@ requirements:
     - parmetis 4.0*
     - mpich 3*
 
+test:
+  commands:
+    - conda inspect linkages daetk  # [not win]
+
 about:
     home: https://github.com/erdc-cm/daetk
     summary: The Differential Algebraic Equation Toolkit
