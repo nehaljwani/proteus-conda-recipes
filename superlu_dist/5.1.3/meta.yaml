@@ -12,10 +12,13 @@ build:
 
 requirements:
   build:
-    - openblas # [linux]
+    - cmake >=2.8.12
+    - gcc      # [osx]
+    - openblas # [unix]
     - parmetis 4.0.3*
   run:
-    - openblas # [linux]
+    - libgcc   # [osx]
+    - openblas # [unix]
     - parmetis 4.0.3*
 
 about:
