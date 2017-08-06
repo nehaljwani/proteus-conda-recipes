@@ -6,6 +6,8 @@ source:
     fn: triangle.zip
     url: https://github.com/erdc-cm/triangle/archive/7ecebd8389cf6bab52c0855a68efab98d5cf2383.zip
     sha256: 7432c0beca45db7d9242d64c334750f9b13fefa4cdb00f137f31f429757701ba
+    patches:
+      - tweak-makefile-for-macOS.patch  # [osx]
 
 build:
   number: 0
@@ -19,7 +21,9 @@ requirements:
 
 test:
   commands:
+    - test -f ${PREFIX}/lib/libtri.a
     - test -f ${PREFIX}/bin/triangle
+    - test -f ${PREFIX}/include/triangle.h
 
 about:
     home: http://www.cs.cmu.edu/~quake/triangle.html

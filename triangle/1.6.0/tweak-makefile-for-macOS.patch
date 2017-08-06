@@ -1,0 +1,41 @@
+From c5570b6245c67c583e0c891facbc306fe49cb9ec Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sun, 6 Aug 2017 10:16:01 -0500
+Subject: [PATCH] tweak makefile for macOS
+
+---
+ src/triangleConfig/makefile.darwin | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/triangleConfig/makefile.darwin b/src/triangleConfig/makefile.darwin
+index ed19b8f..236825e 100644
+--- a/src/triangleConfig/makefile.darwin
++++ b/src/triangleConfig/makefile.darwin
+@@ -19,7 +19,7 @@ LIB = ../lib/
+ 
+ # CC should be set to the name of your favorite C compiler.
+ 
+-CC = /usr/bin/mpicc
++CC = mpicc -fPIC
+ 
+ # CSWITCHES is a list of all switches passed to the C compiler.  I strongly
+ #   recommend using the best level of optimization.  I also strongly
+@@ -95,13 +95,13 @@ RM = /bin/rm
+ 
+ # The action starts here.
+ 
+-all: $(BIN)triangle $(BIN)showme
++all: $(BIN)triangle
+ 
+ trilibrary: $(BIN)triangle.o $(BIN)tricall
+ 	ar r $(LIB)libtri.a $(BIN)triangle.o
+ 	ranlib $(LIB)libtri.a
+ 
+-install: trilibrary $(BIN)triangle $(BIN)showme
++install: trilibrary $(BIN)triangle
+ 	cp -f $(LIB)libtri.a $(PROTEUS_PREFIX)/lib
+ 	cp -f $(BIN)triangle $(BIN)showme  $(PROTEUS_PREFIX)/bin
+ 	cp -f triangle.h $(PROTEUS_PREFIX)/include
+-- 
+2.11.1
+

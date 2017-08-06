@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 cd src
-make -f triangleConfig/makefile.linux
-make -f triangleConfig/makefile.linux trilibrary
+platform=$(uname | tr [:upper:] [:lower:])
+make -f triangleConfig/makefile.${platform}
+make -f triangleConfig/makefile.${platform} trilibrary
 cd ..
 mkdir -p $PREFIX/bin
 cp bin/triangle $PREFIX/bin
