@@ -16,8 +16,10 @@ build:
 requirements:
   build:
     - openblas 0.2.19|0.2.19.*
+    - gcc     # [osx]
     - cmake
   run:
+    - libgcc  # [osx]
     - openblas 0.2.19|0.2.19.*
 
 test:
