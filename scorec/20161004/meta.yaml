@@ -5,6 +5,9 @@ package:
 source:
   fn: scorec_after_sim.tar.gz
   url: https://github.com/SCOREC/core/archive/after_sim.tar.gz
+  patches:
+    - 0001-fix-malloc-usage.patch                     # [osx]
+    - 0002-fmemopen-memstream-ports-for-darwin.patch  # [osx]
 
 build:
   number: 0
@@ -12,7 +15,7 @@ build:
 
 requirements:
   build:
-    - cmake 
+    - cmake
     - mpich 3.2*
     - metis 5.1*
     - parmetis 4.0*
