@@ -19,6 +19,7 @@ build:
 
 requirements:
   build:
+    - setuptools
     - cython >=0.24
     - daetk
     - hdf5 1.8.*
