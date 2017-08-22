@@ -32,7 +32,7 @@ requirements:
     - python
     - scorec
     - superlu 5.*
-    - superlu_dist 4.*
+    - superlu_dist 5.*
     - triangle 1.6*
 
   run:
