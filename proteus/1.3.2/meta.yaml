@@ -38,7 +38,7 @@ requirements:
   run:
     - cython >=0.24
     - daetk
-    - gmsh
+    - gmsh        [not osx]
     - hdf5 1.8.*
     - matplotlib
     - metis 5.*
@@ -57,7 +57,7 @@ requirements:
     - scorec
     - tetgen
 
-tests:
+test:
   imports:
     - proteus
 
