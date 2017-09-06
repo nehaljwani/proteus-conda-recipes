@@ -11,7 +11,7 @@ source:
   patches:
     - use-member-initializer-list.patch
     - Fix-comparision-with-None.patch
-    - add-petsc_skip_complex-flag.patch
+    - add-petsc_include_as_c-flag.patch
 
 build:
   number: 1
