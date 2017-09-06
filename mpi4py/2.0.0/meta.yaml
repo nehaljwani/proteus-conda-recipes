@@ -9,17 +9,16 @@ source:
 
 build:
   number: 0         [linux]
+  number: 1         [osx]
   detect_binary_files_with_prefix: True
 
 requirements:
   build:
     - python
-    - mpich         [linux]
-    - openmpi        [osx]
+    - mpich         [unix]
   run:
     - python
-    - mpich         [linux]
-    - openmpi        [osx]
+    - mpich         [unix]
 
 test:
   imports:
