@@ -14,7 +14,7 @@ source:
     - add-petsc_skip_complex-flag.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -25,6 +25,7 @@ requirements:
     - hdf5 1.8.*
     - metis 5.*
     - mpich 3.*
+    - numpy 1.11*
     - openblas 0.2.*
     - parmetis 4.0.*
     - petsc4py 3.7.*
@@ -44,6 +45,7 @@ requirements:
     - metis 5.*
     - mpich 3.*
     - mpi4py 2.*
+    - numpy >=1.11
     - nose
     - openblas 0.2.*
     - parmetis 4.0.*
