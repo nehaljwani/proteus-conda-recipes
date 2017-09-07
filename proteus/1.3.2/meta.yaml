@@ -39,7 +39,8 @@ requirements:
   run:
     - cython >=0.24
     - daetk
-    - gmsh        [not osx]
+    # This is an optional dependency
+    # - gmsh        [not osx]
     - hdf5 1.8.*
     - matplotlib
     - metis 5.*
